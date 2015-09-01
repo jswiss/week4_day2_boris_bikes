@@ -21,6 +21,7 @@ describe Garage do
   end
 
   it 'should fix broken bikes' do
+    bike.break
     garage.fix(bike)
     expect(bike.broken?).to eq false
   end

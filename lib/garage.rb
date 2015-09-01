@@ -1,7 +1,7 @@
 class Garage
 
  def initialize
-    @broken = true
+    # @broken = true
     @bikes = []
   end
 
@@ -14,7 +14,7 @@ class Garage
   end
 
   def fix bike
-    @broken = false
+    bike.broken = false
   end
 
   def remove bike

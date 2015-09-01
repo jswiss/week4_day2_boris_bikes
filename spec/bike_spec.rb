@@ -18,7 +18,6 @@ describe Bike do
   it 'should be able to be fixed' do
     bike.break
     bike.fix
-
     expect(bike.broken?).to be false
   end
 
