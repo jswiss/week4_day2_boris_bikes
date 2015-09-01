@@ -30,24 +30,3 @@ class DockingStation
   end
 
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

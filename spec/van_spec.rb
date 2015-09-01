@@ -8,7 +8,7 @@ describe Van do
 
   let(:van) { Van.new({capacity: 10})}
   let(:bike) { Bike.new }  
-  let(:docking_station) { DockingStation.new }  
+  let(:station) { DockingStation.new }  
 
   it 'should be created with no bikes on it' do
     expect(van.bike_count).to eq 0
@@ -17,6 +17,9 @@ describe Van do
   it 'should be able to load a bike' do
     van.load(bike)
     expect(van.bike_count).to eq 1
+  end
+
+  it 'should remove a bike from the station\'s count' do
     station.release(bike)
     expect(station.bike_count).to eq 0
   end
