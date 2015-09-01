@@ -1,6 +1,7 @@
 class Garage
 
- def initialize 
+ def initialize
+    @broken = true
     @bikes = []
   end
 
@@ -8,5 +9,16 @@ class Garage
     @bikes.count
   end
 
+  def accept bike
+    @bikes << bike
+  end
+
+  def fix bike
+    @broken = false
+  end
+
+  def remove bike
+    @bikes.delete bike
+  end
 
 end

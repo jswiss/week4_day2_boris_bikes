@@ -14,7 +14,7 @@ describe Van do
     expect(van.bike_count).to eq 0
   end
 
-  it 'should be able to load broken bikes' do
+  it 'should be able to load bikes' do
     van.load(bike)
     expect(van.bike_count).to eq 1
   end
@@ -38,6 +38,14 @@ describe Van do
   it 'should not accept a bike if it\'s full' do
     fill_van van
     expect{van.load(bike)}.to raise_error 'Van is full'
+  end
+
+  it 'should provide a list of broken bikes' do
+    broken_bike = Bike.new
+    broken_bike.break
+    van.load(broken_bike)
+
+    expect(van.available_bikes).to eq [broken_bike]
   end
   
 end
