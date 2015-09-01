@@ -14,7 +14,7 @@ describe Van do
     expect(van.bike_count).to eq 0
   end
 
-  it 'should be able to load a bike' do
+  it 'should be able to load broken bikes' do
     van.load(bike)
     expect(van.bike_count).to eq 1
   end
